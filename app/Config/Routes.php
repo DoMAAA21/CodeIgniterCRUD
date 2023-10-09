@@ -10,6 +10,10 @@ $routes->get('/users', 'UserController::index');
 $routes->group('', ['namespace' => 'App\Controllers'], function ($routes) {
     $routes->get('/', 'Home::index');
     $routes->get('/users', 'UserController::index');
+
+    $routes->get('login', 'LoginController::index');
+    $routes->post('loginauth', 'LoginController::login');
+    // $routes->match(['get', 'post'], 'LoginController/store', 'LoginController::login');
 });
 
 
@@ -20,6 +24,10 @@ $routes->group('api', ['namespace' => 'App\Controllers'], function ($routes) {
     $routes->delete('user/(:segment)', 'UserController::delete/$1');
     $routes->get('user/edit/(:segment)', 'UserController::show/$1');
     $routes->post('user/update/(:segment)', 'UserController::update/$1');
+
+    
+
+
 
 });
 

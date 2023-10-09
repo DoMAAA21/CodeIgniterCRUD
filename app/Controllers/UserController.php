@@ -34,13 +34,14 @@ class UserController extends BaseController
     public function create()
     {
         $User = new User();
-
+        $pW = $this->request->getVar('password');
+        $hashedPass = password_hash($pW, PASSWORD_BCRYPT);
         $data = [
             'fname' => $this->request->getVar('fname'),
             'lname' => $this->request->getVar('lname'),
             'username' => $this->request->getVar('fname'),
             'email' => $this->request->getVar('email'),
-            'password' => $this->request->getVar('password'),
+            'password' => $hashedPass,
         ];
 
   
@@ -89,44 +90,20 @@ class UserController extends BaseController
     public function update($id)
     {
         $User = new User();
+        $pW = $this->request->getVar('password');
+        $hashedPass = password_hash($pW, PASSWORD_BCRYPT);
+
         $data = [
             'fname' => $this->request->getVar('fname'),
             'lname' => $this->request->getVar('lname'),
             'username' => $this->request->getVar('fname'),
             'email' => $this->request->getVar('email'),
-            'password' => $this->request->getVar('password'),
+            'password' => $hashedPass,
         ];
         $User->update($id, $data);
 
         return $this->response->setJSON(['message' => 'User updated successfully']);
     }
 
-    // public function create()
-    // {
-
-
-    //     $db = db_connect();
-
-    //     // var_dump($db);
-    //     $data = [
-
-    //         'fname' => $this->request->getPost('fname'),
-    //         'lname' => $this->request->getPost('lname'),
-    //         'username' => $this->request->getPost('fname'),
-    //         'email' => $this->request->getPost('email'),
-    //         'password' => $this->request->getPost('password'),
-    //     ];
-    //     $db->table('users')->insert($data);
-
-    //     $responseData = [
-    //                     'message' => 'User created successfully',
-    //                     'data' => $data,
-    //                 ];
-
-    //                 return $this->response
-    //                     ->setStatusCode(200)
-    //                     ->setJSON($responseData);
-
-    // }
 
 }
