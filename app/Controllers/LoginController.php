@@ -12,37 +12,54 @@ class LoginController extends BaseController
         echo view('auth/login');
     }
 
+    private function setUserSession($user)
+    {
+        $data = [
+            'id' => $user['id'],
+            'fname' => $user['fname'],
+            'lname' => $user['lname'],
+            'email' => $user['email'],
+            'isLoggedIn' => true,
+            "role" => $user['role'],
+        ];
+
+        session()->set($data);
+        return true;
+    }
+
     public function login()
     {
-        // return redirect()->to('/users');
-        // var_dump('error');
-        // Get the input data from the form
+
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
 
-        // var_dump($password);
-        // Load the UserModel (replace with your actual model)
+
         $userModel = new User();
 
-        // Check if a user with the provided username exists
+
         $user = $userModel->where('email', $email)->first();
 
-       
-
-        // var_dump($us);
-
         if ($user && password_verify($password, $user['password'])) {
-            // Password is correct
-            // You can store user data in session or implement JWT authentication
-            // For example, store user ID in session:
-            session()->set('user_id', $user['id']);
 
-            // Redirect to a dashboard or protected page
-            return redirect()->to('/users');
+            $this->setUserSession($user);
+    
+
+         
+            if ($user['role'] == "user") {  
+                return redirect()->to('/users');
+            } elseif ($user['role'] == "employee") {
+
+                return redirect()->to('/users');
+            }
         } else {
-            // Authentication failed
-            var_dump('error');
+            // var_dump('error');
             return redirect()->to('/login')->with('error', 'Invalid username or password');
         }
+    }
+
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('login');
     }
 }

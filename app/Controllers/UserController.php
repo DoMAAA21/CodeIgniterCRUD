@@ -41,6 +41,7 @@ class UserController extends BaseController
             'lname' => $this->request->getVar('lname'),
             'username' => $this->request->getVar('fname'),
             'email' => $this->request->getVar('email'),
+            'role' => 'user',
             'password' => $hashedPass,
         ];
 
@@ -98,6 +99,7 @@ class UserController extends BaseController
             'lname' => $this->request->getVar('lname'),
             'username' => $this->request->getVar('fname'),
             'email' => $this->request->getVar('email'),
+            'role' => 'employee',
             'password' => $hashedPass,
         ];
         $User->update($id, $data);
