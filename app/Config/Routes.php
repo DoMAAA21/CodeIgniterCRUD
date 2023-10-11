@@ -19,6 +19,8 @@ $routes->group('', ['namespace' => 'App\Controllers'], function ($routes) {
     $routes->post('postregister', 'RegisterController::register');
     $routes->get('login', 'LoginController::index');
     $routes->post('loginauth', 'LoginController::login');
+    $routes->post('logout', 'LoginController::logout');
+
 });
 
 

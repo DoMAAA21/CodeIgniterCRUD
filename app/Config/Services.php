@@ -29,8 +29,4 @@ class Services extends BaseService
      *     return new \CodeIgniter\Example();
      * }
      */
-    public $classmap = [
-        'Authenticator' => \App\Libraries\Authenticator::class,
-     
-    ];
 }

@@ -1,3 +1,5 @@
+<div class="container-fluid" style="margin-top: 70px;">
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 <h4 class="card-title">Customers</h4>
 
 <table id="usertable" class="table table-hover " style="width:100%;">
@@ -13,6 +15,8 @@
     <tbody id="userbody">
     </tbody>
 </table>
+</main>
+</div>
 
 <div class="modal" id="userModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document" style="width:75%;">
