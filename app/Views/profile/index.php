@@ -14,7 +14,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="text-center">
-                            <img src="<?= base_url().'writable/uploads/'. $avatar;?>" alt="User Avatar" class="img-thumbnail" width="150">
+                            <img src="/uploads/<?=$avatar;?>" alt="User Avatar" class="img-thumbnail" width="150">
                         </div>
                         <form method="post" action="<?= base_url('profile-upload'); ?>" enctype="multipart/form-data">
                             <div class="mb-3">

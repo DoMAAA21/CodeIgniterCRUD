@@ -19,7 +19,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
-    
+
 
     <style>
         /* Custom CSS to make the sidebar full height and fixed */
@@ -64,7 +64,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="/users">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
@@ -84,17 +84,17 @@
                     <?= esc(session()->get('fname') . ' ' . session()->get('lname')); ?>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-    <li><a class="dropdown-item" href="#">Profile</a></li>
-    <li><a class="dropdown-item" href="#">Settings</a></li>
-    <li>
-        <hr class="dropdown-divider">
-    </li>
-    <li>
-        <form id="logoutForm" action="<?= base_url('logout') ?>" method="post" style="display: inline;">
-            <button type="submit" class="dropdown-item" style="background: none; border: none; padding: 0; cursor: pointer;"><a class="dropdown-item" >Logout</a></button>
-        </form>
-    </li>
-</ul>
+                    <li><a class="dropdown-item" href="/me">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <form id="logoutForm" action="<?= base_url('logout') ?>" method="post" style="display: inline;">
+                            <button type="submit" class="dropdown-item" style="background: none; border: none; padding: 0; cursor: pointer;"><a class="dropdown-item">Logout</a></button>
+                        </form>
+                    </li>
+                </ul>
 
             </div>
         </div>
@@ -102,7 +102,7 @@
 
 
     <!-- Full-Height Sidebar (Moved below the navigation bar in the source code) -->
-    <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar" style="margin-top: 56px;">
+    <!-- <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar" style="margin-top: 56px;">
         <div class="position-sticky">
             <ul class="nav flex-column">
                 <li class="nav-item">
@@ -123,7 +123,7 @@
                 <!-- Add more sidebar items as needed -->
             </ul>
         </div>
-    </nav>
+    <!-- </nav>  -->
 
     <!-- Your content goes here -->
 
@@ -151,12 +151,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css" rel="stylesheet">
-
-
     <script type="text/javascript" src="/js/main.js"></script>
-
-
-    <!-- Your custom JavaScript can go here -->
 
 </body>
 

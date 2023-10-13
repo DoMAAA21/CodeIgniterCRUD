@@ -38,7 +38,7 @@ class ProfileController extends BaseController
         return redirect()->to('/login')->with('error', 'Error Occured Please re-login');
     }
 
-    $uploadDirectory = WRITEPATH . 'uploads';
+    $uploadDirectory = 'uploads';
 
     $uploadedFile = $this->request->getFile('userfile');
 
