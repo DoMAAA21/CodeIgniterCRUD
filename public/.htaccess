@@ -18,9 +18,9 @@ Options -Indexes
 
 	# Redirect Trailing Slashes...
 	RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php/$1 [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L]
 
 
 	# Rewrite "www.example.com -> example.com"

@@ -19,6 +19,7 @@ class UserController extends BaseController
     }
     public function index()
     {
+        helper('url');
         echo view('layouts/header');
         echo view('users/index');
         echo view('layouts/footer');
