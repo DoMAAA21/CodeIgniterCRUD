@@ -19,10 +19,9 @@ class UserController extends BaseController
     }
     public function index()
     {
-        helper('url');
+        // helper('url');
         echo view('layouts/header');
         echo view('users/index');
-        echo view('layouts/footer');
     }
 
     public function fetchAll()

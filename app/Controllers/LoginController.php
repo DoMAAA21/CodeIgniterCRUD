@@ -20,7 +20,8 @@ class LoginController extends BaseController
             'lname' => $user['lname'],
             'email' => $user['email'],
             'isLoggedIn' => true,
-            "role" => $user['role'],
+            'role' => $user['role'],
+            'avatar' => $user['avatar']
         ];
 
         session()->set($data);

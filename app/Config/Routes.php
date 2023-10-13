@@ -7,8 +7,12 @@ use CodeIgniter\Router\RouteCollection;
  */
 // Views Rendering
 
+
 $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('/users', 'UserController::index');
+    $routes->get('/me', 'ProfileController::index');
+    $routes->post('/profile-upload', 'ProfileController::upload');
+    
 });
 
 
