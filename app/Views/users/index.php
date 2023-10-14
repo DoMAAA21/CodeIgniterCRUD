@@ -1,5 +1,5 @@
 <div class="container-fluid" style="margin-top: 70px;">
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <main class="px-md-4">
 <h4 class="card-title">Users</h4>
 
 <table id="usertable" class="table table-hover " style="width:100%;">

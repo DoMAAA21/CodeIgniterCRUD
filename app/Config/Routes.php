@@ -10,6 +10,7 @@ use CodeIgniter\Router\RouteCollection;
 
 $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('/users', 'UserController::index');
+    $routes->get('/products', 'ProductController::index');
     $routes->get('/me', 'ProfileController::index');
     $routes->post('/profile-upload', 'ProfileController::upload');
     
@@ -35,6 +36,12 @@ $routes->group('api', ['namespace' => 'App\Controllers'], function ($routes) {
     $routes->delete('user/(:segment)', 'UserController::delete/$1');
     $routes->get('user/edit/(:segment)', 'UserController::show/$1');
     $routes->post('user/update/(:segment)', 'UserController::update/$1');
+
+    $routes->get('products', 'ProductController::fetchAll');
+    $routes->post('product/create', 'ProductController::create');
+    $routes->delete('product/(:segment)', 'ProductController::delete/$1');
+    $routes->get('product/edit/(:segment)', 'ProductController::show/$1');
+    $routes->post('product/update/(:segment)', 'ProductController::update/$1');
 
     
 

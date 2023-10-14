@@ -22,7 +22,6 @@
 
 
     <style>
-        /* Custom CSS to make the sidebar full height and fixed */
         #sidebar {
             position: fixed;
             top: 0;
@@ -30,24 +29,28 @@
             height: 100vh;
         }
 
-        /* Adjust content area's padding to create space on the left for the sidebar */
+
         #content {
             padding-left: 250px;
-            /* Adjust this value to match your sidebar width */
+
         }
 
-        /* Dark mode for the navigation bar */
+        .navbar {
+            height: 90px;
+        }
+
+
         .navbar-dark {
             background-color: #333;
-            /* Dark background color */
+
             color: #fff;
-            /* Light text color */
+
         }
 
         .navbar-dark .navbar-brand,
         .navbar-dark .navbar-toggler-icon {
             color: #fff;
-            /* Light text color for brand and toggler */
+
         }
     </style>
 </head>
@@ -67,10 +70,10 @@
                         <a class="nav-link" href="/users">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="/users">Users</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="/products">Products</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -101,7 +104,6 @@
     </nav>
 
 
-    <!-- Full-Height Sidebar (Moved below the navigation bar in the source code) -->
     <!-- <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar" style="margin-top: 56px;">
         <div class="position-sticky">
             <ul class="nav flex-column">
@@ -120,16 +122,11 @@
                         Analytics
                     </a>
                 </li>
-                <!-- Add more sidebar items as needed -->
-            </ul>
-        </div>
-    <!-- </nav>  -->
-
-    <!-- Your content goes here -->
-
-
-    <!-- Bootstrap JS -->
-    <!-- Bootstrap JavaScript -->
+               Add more sidebar items as needed 
+    </ul>
+    </div>
+     </nav>  
+    -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -138,7 +135,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.12.1/af-2.4.0/b-2.2.3/b-html5-2.2.3/b-print-2.2.3/r-2.3.0/sl-1.4.0/datatables.min.js">
     </script>
-    <!-- JavaScript Bundle with Popper -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js" integrity="sha512-RdSPYh1WA6BF0RhpisYJVYkOyTzK4HwofJ3Q7ivt/jkpW6Vc8AurL1R+4AUcvn9IwEKAPm/fk7qFZW3OuiUDeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

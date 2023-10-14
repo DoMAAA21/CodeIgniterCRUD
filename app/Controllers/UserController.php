@@ -12,7 +12,6 @@ class UserController extends BaseController
 
     public function __construct()
     {
-        // Load the URL helper using Dependency Injection
         helper('url');
         $this->db = \Config\Database::connect();
         $this->response = service('response');
@@ -58,9 +57,9 @@ class UserController extends BaseController
                 ->setStatusCode(200)
                 ->setJSON($responseData);
         } else {
-            // Handle database insert failure
+            
             return $this->response
-                ->setStatusCode(500) // Internal Server Error
+                ->setStatusCode(500) 
                 ->setJSON(['error' => 'User creation failed.']);
         }
     }

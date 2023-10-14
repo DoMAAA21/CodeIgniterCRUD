@@ -47,7 +47,7 @@ class LoginController extends BaseController
 
          
             if ($user['role'] == "user") {  
-                return redirect()->to('/users');
+                return redirect()->to('/products');
             } elseif ($user['role'] == "employee") {
 
                 return redirect()->to('/users');

@@ -13,6 +13,16 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
+                        <?php if (session()->has('error')) : ?>
+                            <div class="alert alert-danger">
+                                <?= session('error') ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if (session()->has('success')) : ?>
+                            <div class="alert alert-success">
+                                <?= session('success') ?>
+                            </div>
+                        <?php endif; ?>
                         <div class="text-center">
                             <img src="/uploads/<?=$avatar;?>" alt="User Avatar" class="img-thumbnail" width="150">
                         </div>
